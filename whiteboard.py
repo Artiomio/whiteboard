@@ -35,7 +35,6 @@ def get_screenshot(sct):
         # Get raw pixels from the screen, save it to a Numpy array
         monitor = SCREEN_GRAB_RANGE
         img = np.array(sct.grab(monitor))
-        cv2.imwrite("/tmp/hello.jpg", img)
     except:
         print("Error taking screenshot!")
         width = SCREEN_GRAB_RANGE["width"] - SCREEN_GRAB_RANGE["left"]
@@ -174,6 +173,6 @@ print(f"http://banana.sknt.ru/{secret_codes}/whiteboard")
 if __name__ == "__main__":
     #app.run(host="0.0.0.0", port=7893)
     import webbrowser
-    webbrowser.open(f"http://banana.sknt.ru/{secret_code}/whiteboard")
+    webbrowser.open(f"127.0.0.1:/{secret_code}/whiteboard")
 
     serve(app, host='0.0.0.0', port=7893)

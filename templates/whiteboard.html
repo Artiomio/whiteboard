@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <body>
+          <img id="im" width="1200" height="750">
+    	<script>
+            function getUrl() { return "./screenshot?"+Math.random() }
+            setInterval(function() {if (!document.hidden) document.getElementById("im").src = getUrl()}, {{pause_in_milliseconds}});
+    	</script>
+    </body>
+</html>

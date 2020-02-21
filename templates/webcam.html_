@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <body>
+
+
+
+
+
+	<img id="im" width="133" height="100">
+
+
+
+
+
+    	<script>
+            function getUrl() { return "./webcamshot?"+Math.random() }    	
+            setInterval(function() {if (!document.hidden) document.getElementById("im").src = getUrl()}, 150);
+    	</script>
+    </body>
+</html>

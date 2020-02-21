@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <style>
+
+       .search-box {
+           border-radius: 8px;
+           display: inline-block;
+           box-shadow: 10px 10px 5px #999;
+           padding: 50px;
+
+           border-style: solid;
+           border-width: 1px;
+           border-color: rgb(220, 220, 220);
+
+           width: 650px;
+           height: 500px;
+           margin-left: 30%;
+           margin-right: 30%;
+           margin-top: 10%; // Behaves strangely
+
+           overflow-y: hidden; 
+           overflow-x: hidden; 
+
+       }
+
+       .big-div {
+            height: 80vh;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            padding: 0px;
+
+       }
+
+
+
+    
+    
+    </style>
+
+    <body>
+
+    <div class="big-div">
+      <div class="search-box">
+          <img id="im" width="266" height="200">
+      </div>
+     </div>
+
+    	<script>
+            function getUrl() { return "./webcamshot?"+Math.random() }
+            setInterval(function() {if (!document.hidden) document.getElementById("im").src = getUrl()}, {{pause_in_milliseconds}});
+    	</script>
+    </body>
+</html>

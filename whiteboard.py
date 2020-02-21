@@ -173,6 +173,7 @@ print(f"http://banana.sknt.ru/{secret_codes}/whiteboard")
 if __name__ == "__main__":
     #app.run(host="0.0.0.0", port=7893)
     import webbrowser
-    webbrowser.open(f"127.0.0.1:/{secret_code}/whiteboard")
+    port = 7893
+    webbrowser.open(f"http://127.0.0.1:{port}/{secret_code}/whiteboard")
 
-    serve(app, host='0.0.0.0', port=7893)
+    serve(app, host='0.0.0.0', port=port)

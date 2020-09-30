@@ -1,5 +1,5 @@
 numpy
 flask
 mss
-cv2
+opencv-python
 waitress
